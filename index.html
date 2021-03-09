@@ -239,14 +239,15 @@
         let prvky = document.getElementsByClassName("vypujcka-item");
 
         for(let prvek of prvky){
-            prvek.getElementsByTagName("input")[0].onclick = (e) => {
+            prvek.getElementsByTagName("input")[0].onclick = () => {
                 let detail = prvek.getElementsByClassName("detail-vypujcky-container")[0];
+                let height = prvek.getElementsByClassName("detail-vypujcky-container")[0].scrollHeight;
 
-                if(detail.style.height == 248 + "px"){
+                if(detail.style.height == height + "px"){
                     detail.style.height = 0 + "px";
                 }
                 else{
-                    detail.style.height = 248 + "px";
+                    detail.style.height = height + "px";
                 }
             }
         }
